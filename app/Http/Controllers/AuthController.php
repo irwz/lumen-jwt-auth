@@ -94,6 +94,6 @@ class AuthController extends Controller
 
         User::create($request->all());
 
-        return response()->json(['message' => trans('auth.register.success')], 201);
+        return $this->login($request);
     }
 }
